@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/damingerdai/knexer/issues"
   },
-  "homepage": "https://github.com/damingerdai/knexer#readme"
+  "homepage": "https://github.com/damingerdai/knexer#readme",
+  "devDependencies": {
+    "husky": "^4.2.3"
+  }
 }
