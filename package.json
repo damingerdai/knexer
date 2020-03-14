@@ -21,6 +21,9 @@
     "url": "https://github.com/damingerdai/knexer/issues"
   },
   "homepage": "https://github.com/damingerdai/knexer#readme",
+  "peerDependencies": {
+    "knex": ">=0.20.0"
+  },
   "dependencies": {
     "knex": "^0.20.11"
   },
