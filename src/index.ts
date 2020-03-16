@@ -29,6 +29,11 @@ export class Knexer<T = any> {
         return record;
     }
 
+    public async update(value: Partial<T>, selectors?: PartialWithArray<T>) {
+        const query = selectors ? this.manyQuery(selectors) : this.raw;
+        await query.update(value);
+    }
+
     protected manyQuery(selectors: PartialWithArray<T> = {}): Knex.QueryBuilder {
         let query = this.raw;
         Object.keys(selectors).forEach(k => {
