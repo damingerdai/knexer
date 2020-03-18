@@ -9,7 +9,7 @@ export class Knexer<T = unknown> {
 
     constructor(
         private db: Knex,
-        private tableName: string) {}
+        private tableName: string) { }
 
     public async find(selectors: PartialWithArray<T> = {}): Promise<T> {
         const query = this.manyQuery(selectors).first();
@@ -45,11 +45,10 @@ export class Knexer<T = unknown> {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const v = (selectors as any)[k];
             if (Array.isArray(v)) {
-				query = query.whereIn(k, v);
-			}
- else {
-				query = query.where(k, v);
-			}
+                query = query.whereIn(k, v);
+            } else {
+                query = query.where(k, v);
+            }
         });
         return query;
     }
