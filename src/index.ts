@@ -1,7 +1,7 @@
 import * as Knex from 'knex';
 import { PartialWithArray } from './type';
 
-export class Knexer<T = any> {
+export class Knexer<T = unknown> {
 
     public get raw() {
         return this.db(this.tableName)
@@ -42,6 +42,7 @@ export class Knexer<T = any> {
     protected manyQuery(selectors: PartialWithArray<T> = {}): Knex.QueryBuilder {
         let query = this.raw;
         Object.keys(selectors).forEach(k => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const v = (selectors as any)[k];
             if (Array.isArray(v)) {
 				query = query.whereIn(k, v);
