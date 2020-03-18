@@ -1,5 +1,5 @@
-import * as Knex from "knex";
-import { PartialWithArray } from "./type";
+import * as Knex from 'knex';
+import { PartialWithArray } from './type';
 
 export class Knexer<T = unknown> {
 

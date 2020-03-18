@@ -93,6 +93,8 @@ module.exports = {
         // "no-implicit-globals": "warn",
         // TODO: Add More
 
+        // Stylistic Issues
+        "quotes": ["error", "single"],
 
         "@typescript-eslint/explicit-function-return-type": "off"
     }
