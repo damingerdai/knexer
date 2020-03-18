@@ -1,14 +1,14 @@
-import * as Knex from 'knex';
-import { PartialWithArray } from './type';
+import * as Knex from "knex";
+import { PartialWithArray } from "./type";
 
 export class Knexer<T = unknown> {
 
     public get raw() {
-        return this.db(this.tableName)
+        return this.db(this.tableName);
     }
 
     constructor(
-        private db: Knex, 
+        private db: Knex,
         private tableName: string) {}
 
     public async find(selectors: PartialWithArray<T> = {}): Promise<T> {
@@ -24,7 +24,7 @@ export class Knexer<T = unknown> {
     }
 
     public async count(selectors: PartialWithArray<T> = {}): Promise<number> {
-        const query = this.manyQuery(selectors).count({ count: '*' });
+        const query = this.manyQuery(selectors).count({ count: "*" });
         const record = await query;
         return record;
     }
@@ -46,10 +46,11 @@ export class Knexer<T = unknown> {
             const v = (selectors as any)[k];
             if (Array.isArray(v)) {
 				query = query.whereIn(k, v);
-			} else {
+			}
+ else {
 				query = query.where(k, v);
 			}
         });
         return query;
-    } 
+    }
 }
