@@ -18,7 +18,7 @@
     "orm"
   ],
   "author": "明国宾",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/damingerdai/knexer/issues"
   },
