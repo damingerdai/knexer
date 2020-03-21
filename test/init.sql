@@ -3,6 +3,6 @@ CREATE TABLE users (
     name character varying(255) NOT NULL,
     age integer NOT NULL,
     marriage boolean NOT NULL DEFAULT false,
-    create_at timestamp with zone NOT NULL DEFAULT now(),
-    update_at timestamp with zone NOT NULL
+    create_at timestamp with time zone NOT NULL DEFAULT now(),
+    update_at timestamp with time zone NOT NULL
 )
