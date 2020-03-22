@@ -4,7 +4,7 @@
   "description": "a orm tools based on knexjs",
   "main": "index.js",
   "scripts": {
-		"init": "sh init.sh",
+    "init": "sh init.sh",
     "build": "tsc",
     "gulp": "gulp",
     "test": "jest",
@@ -12,7 +12,7 @@
     "lint:ts": "eslint src/**/*.ts",
     "seed:make": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:make",
     "seed:run": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:run",
-		"db": "docker-compose -f scripts/docker-compose.yml up"
+    "db": "docker-compose -f scripts/docker-compose.yml up"
   },
   "repository": {
     "type": "git",
@@ -36,11 +36,13 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@types/chai": "^4.2.11",
     "@types/jest": "^25.1.4",
     "@types/knex": "^0.16.1",
     "@types/node": "^10.17.17",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
+    "chai": "^4.2.0",
     "delete": "^1.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
@@ -58,8 +60,8 @@
     "rollup-plugin-sourcemaps": "^0.5.0",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
-	},
-	"resolutions": {
+  },
+  "resolutions": {
     "**/**/minimist": ">=0.2.1 <1.0.0 || >=1.2.3"
   }
 }
