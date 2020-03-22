@@ -4,13 +4,15 @@
   "description": "a orm tools based on knexjs",
   "main": "index.js",
   "scripts": {
+		"init": "sh init.sh",
     "build": "tsc",
     "gulp": "gulp",
     "test": "jest",
     "preinstall": "node tools/check-yarn.js",
     "lint:ts": "eslint src/**/*.ts",
     "seed:make": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:make",
-    "seed:run": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:run"
+    "seed:run": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:run",
+		"db": "docker-compose -f scripts/docker-compose.yml up"
   },
   "repository": {
     "type": "git",
