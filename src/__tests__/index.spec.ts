@@ -1,5 +1,8 @@
 /* eslint-disable no-undef */
 
-test('unit test ', () => {
-  console.log('unit test');
+describe('knexer', () => {
+  test('unit test ', () => {
+    console.log('unit test');
+  });
 });
+
