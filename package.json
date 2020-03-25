@@ -10,6 +10,7 @@
     "test": "jest",
     "preinstall": "node tools/check-yarn.js",
     "lint:ts": "eslint src/**/*.ts",
+    "lint": "yarn lint:ts",
     "seed:make": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:make",
     "seed:run": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:run",
     "db": "docker-compose -f scripts/docker-compose.yml up"
