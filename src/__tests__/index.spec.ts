@@ -53,9 +53,20 @@ class User {
 describe('knexer', () => {
   let repository: Knexer<User>;
   let db: Knex;
+  let userId: string;
+  let user: User;
   beforeAll(() => {
     db = Knex(datasource);
     repository = new Knexer<User>(db, 'users');
+    userId = generateUUID();
+    user = {
+      age: 20,
+      create_at: new Date(),
+      id: userId,
+      marriage: false,
+      name: 'daming' + new Date().getTime(),
+      update_at: new Date()
+    };
   });
 
   test('should create', () => {
@@ -63,15 +74,29 @@ describe('knexer', () => {
   });
 
   test('db action', async (done) => {
-    const user: User = {
-      age: 20,
-      create_at: new Date(),
-      id: generateUUID(),
-      marriage: false,
-      name: 'daming' + new Date().getTime(),
-      update_at: new Date()
-    };
     await repository.create(new User(user));
+
+    let dbUser = await repository.find({ id: userId});
+    expect(dbUser).to.not.null;
+    expect(dbUser.age).equal(20);
+    expect(dbUser.marriage).equal(false);
+    expect(dbUser.name).contain('daming');
+
+    let dbCount = await repository.count({ id: userId });
+    expect(dbCount).equal(1);
+
+    user.age = 40;
+    user.marriage = true;
+    await repository.update(user, { id: userId });
+    dbUser = await repository.find({ id: userId});
+    expect(dbUser).to.not.null;
+    expect(dbUser.age).equal(40);
+    expect(dbUser.marriage).equal(true);
+    expect(dbUser.name).contain('daming');
+
+    dbCount = await repository.count({ id: userId });
+    expect(dbCount).equal(1);
+
     done();
   }, 2000);
 

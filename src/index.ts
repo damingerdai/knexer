@@ -26,7 +26,9 @@ export class Knexer<T = unknown> {
   public async count(selectors: PartialWithArray<T> = {}): Promise<number> {
     const query = this.manyQuery(selectors).count({ count: '*' });
     const record = await query;
-    return record;
+
+    const result = record[0]?.count || 0;
+    return typeof result === 'number' ? result : parseInt(result, 10);
   }
 
   public async update(value: Partial<T>, selectors?: PartialWithArray<T>) {
