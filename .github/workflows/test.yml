@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -19,4 +19,4 @@ jobs:
     - run: yarn
     - uses: actions/checkout@v2
     - name: Docker Compose DB Test
-      run: yarn db:up && yarn test && yarn db:down
+    - run: docker volume create --name=pg-knexer && yarn db:up && yarn test && yarn db:down
