@@ -17,6 +17,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install yarn -g
     - run: yarn
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: Docker Compose DB Test
     - run: docker volume create --name=pg-knexer && yarn db:up && yarn test && yarn db:down
