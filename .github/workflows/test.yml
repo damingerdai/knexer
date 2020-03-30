@@ -1,4 +1,4 @@
-name: damingerdai Knexer Build Check
+name: damingerdai Knexer Integration Test Check
 
 on: [push]
 
