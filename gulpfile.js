@@ -15,7 +15,7 @@ function clean(cb) {
 }
 
 function move(cb) {
-    return src('src/**/*.ts')
+    return src('src/**/*?.ts')
         .pipe(dest('dist/src'))
 }
 
@@ -52,5 +52,10 @@ async function buildByRollup(cd) {
     });
 }
 
+function cleanDist(cb) {
+  // body omitted
+  del(['dist/**/__tests__/**'], cb);
+}
+
 exports.build = build;
-exports.default = series(clean, move, build, buildByRollup)
+exports.default = series(clean, move, build, buildByRollup, cleanDist)
