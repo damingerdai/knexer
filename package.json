@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "init": "sh init.sh",
-    "build": "tsc",
-    "gulp": "gulp",
+    "build": "gulp",
     "test": "jest",
     "preinstall": "node tools/check-yarn.js",
     "lint:ts": "eslint src/**/*.ts",
