@@ -6,6 +6,8 @@
   "scripts": {
     "init": "sh init.sh",
     "build": "gulp",
+    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog:all": "npx conventional-changelog -p angular -i CHANGELOG.md -w -s 0",
     "test": "jest",
     "preinstall": "node tools/check-yarn.js",
     "lint:ts": "eslint src/**/*.ts",
@@ -13,7 +15,8 @@
     "seed:make": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:make",
     "seed:run": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:run",
     "db:up": "docker-compose -f scripts/docker-compose.yml up",
-    "db:down": "docker-compose -f scripts/docker-compose.yml down"
+    "db:down": "docker-compose -f scripts/docker-compose.yml down",
+    "version": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -44,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "chai": "^4.2.0",
+    "conventional-changelog-cli": "^2.0.31",
     "delete": "^1.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
