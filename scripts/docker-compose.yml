@@ -1,0 +1,16 @@
+version: "3"
+services:
+  database:
+    image: postgres:12.2
+    ports:
+      - 5432:5432
+    volumes:
+      - pg-knexer:/var/lib/postgresql/data
+      - ../test/data/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: postgres
+volumes:
+  pg-knexer:
+    external: true

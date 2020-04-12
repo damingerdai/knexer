@@ -1,0 +1,23 @@
+name: damingerdai Knexer Integration Test Check
+
+on: [push]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - name: Checkout
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install yarn -g
+    - run: yarn
+      uses: actions/checkout@v2
+    - name: Docker Compose DB Test
+    - run: docker volume create --name=pg-knexer && yarn db:up && yarn test && yarn db:down
