@@ -4,7 +4,7 @@
 import { expect } from 'chai';
 import Knex from 'knex';
 
-import { Knexer } from '../index';
+import { Knexer } from '../knexer';
 
 function generateUUID() {
   let d = new Date().getTime();

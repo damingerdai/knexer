@@ -2,7 +2,7 @@
   "name": "knexer",
   "version": "0.0.1",
   "description": "a orm tools based on knexjs",
-  "main": "index.js",
+  "main": "knexer.js",
   "scripts": {
     "init": "sh init.sh",
     "build": "gulp",
