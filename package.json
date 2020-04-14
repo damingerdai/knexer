@@ -1,6 +1,6 @@
 {
   "name": "knexer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a orm tools based on knexjs",
   "main": "knexer.js",
   "scripts": {
