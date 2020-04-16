@@ -1,5 +1,9 @@
 import * as Knex from 'knex';
-import { PartialWithArray } from './type';
+
+export type PartialWithArray<T> = {
+  [P in keyof T]?: T[P] | T[P][];
+};
+
 
 export class Knexer<T = unknown> {
 
