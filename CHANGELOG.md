@@ -1,3 +1,12 @@
+## [0.1.1-beta3](https://github.com/damingerdai/knexer/compare/v0.1.1-beta2...v0.1.1-beta3) (2020-04-16)
+
+
+### Bug Fixes
+
+*  auto npm workflow when tags push ([545a1ea](https://github.com/damingerdai/knexer/commit/545a1ea7a183e6f34bcb0880aef2b979e5b3d6f3))
+
+
+
 ## [0.1.1-beta2](https://github.com/damingerdai/knexer/compare/v0.0.1-beta2...v0.1.1-beta2) (2020-04-16)
 
 
