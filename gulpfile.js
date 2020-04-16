@@ -10,7 +10,6 @@ var merge = require('merge2');
 const tsProject = ts.createProject('tsconfig.json');
 
 function clean(cb) {
-  // body omitted
   del(['dist'], cb);
 }
 
