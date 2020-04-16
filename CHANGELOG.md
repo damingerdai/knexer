@@ -1,3 +1,12 @@
+## [0.0.1-beta2](https://github.com/damingerdai/knexer/compare/v0.1.1-beta1...v0.0.1-beta2) (2020-04-16)
+
+
+### Bug Fixes
+
+*  auto npm workflow when replease published ([78e1b70](https://github.com/damingerdai/knexer/commit/78e1b70575ab726d7ed78c2b6e616717a1734b01))
+
+
+
 ## [0.1.1-beta1](https://github.com/damingerdai/knexer/compare/v0.1.0...v0.1.1-beta1) (2020-04-16)
 
 
