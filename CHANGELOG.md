@@ -1,3 +1,7 @@
+## [0.1.1-beta2](https://github.com/damingerdai/knexer/compare/v0.0.1-beta2...v0.1.1-beta2) (2020-04-16)
+
+
+
 ## [0.0.1-beta2](https://github.com/damingerdai/knexer/compare/v0.1.1-beta1...v0.0.1-beta2) (2020-04-16)
 
 
