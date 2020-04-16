@@ -1,6 +1,6 @@
 {
   "name": "knexer",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "a orm tools based on knexjs",
   "main": "bundles/knexer.umd.js",
   "module": "fesm5/knexer.js",
