@@ -1,3 +1,12 @@
+## [0.1.1-beta1](https://github.com/damingerdai/knexer/compare/v0.1.0...v0.1.1-beta1) (2020-04-16)
+
+
+### Features
+
+* add auto npm workflow ([ba0dbc0](https://github.com/damingerdai/knexer/commit/ba0dbc0ae0aa968ef36af9ed9c5ca77868285f29))
+
+
+
 # 0.1.0 (2020-04-16)
 
 
