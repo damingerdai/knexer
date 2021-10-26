@@ -1,3 +1,7 @@
+# [0.2.0](https://github.com/damingerdai/knexer/compare/v0.1.1-beat6...v0.2.0) (2021-10-26)
+
+
+
 ## [0.1.1-beat6](https://github.com/damingerdai/knexer/compare/v0.1.1-beta5...v0.1.1-beat6) (2020-04-16)
 
 
