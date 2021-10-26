@@ -17,7 +17,6 @@
     "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
     "changelog:all": "npx conventional-changelog -p angular -i CHANGELOG.md -w -s 0",
     "test": "jest",
-    "preinstall": "node tools/check-yarn.js",
     "lint:ts": "eslint src/**/*.ts",
     "lint": "yarn lint:ts",
     "seed:make": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:make",
