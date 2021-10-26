@@ -23,7 +23,9 @@
     "seed:run": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:run",
     "db:up": "docker-compose -f scripts/docker-compose.yml up",
     "db:down": "docker-compose -f scripts/docker-compose.yml down",
-    "version": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+    "version": "npx conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "version:patch": "yarn version --patch",
+    "version:minor": "yarn version --minor"
   },
   "repository": {
     "type": "git",
