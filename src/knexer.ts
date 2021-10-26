@@ -1,4 +1,4 @@
-import * as Knex from 'knex';
+import { Knex } from 'knex';
 
 export type PartialWithArray<T> = {
   [P in keyof T]?: T[P] | T[P][];

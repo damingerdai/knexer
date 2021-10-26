@@ -100,12 +100,6 @@ async function buildByRollup3(cd) {
   });
 }
 
-
-function cleanDist(cb) {
-  // body omitted
-  del(['dist/**/__tests__/**'], cb);
-}
-
 /// exports.build = build;
 // exports.default = series(clean, parallel(moveSourceFile, moveResourceFile), series(buildTypescript, buildByRollup), cleanDist)
 exports.default = series(
